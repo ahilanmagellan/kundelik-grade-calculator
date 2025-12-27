@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор оценки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Калькулятор оценки</h1>
+
+    <!-- Выбор варианта расчета ФО -->
+    <label for="variantSelect">Выберите вариант расчета ФО:</label>
+    <select id="variantSelect">
+        <option value="manual">Ввод каждой ФО вручную</option>
+        <option value="sum">Ввод суммы и количества ФО</option>
+    </select>
+
+    <!-- ФО секция -->
+    <div class="section fo-section" id="foSection"></div>
+
+    <!-- Количество СОР -->
+    <div class="section sor-section">
+        <label>Количество СОР:</label>
+        <input type="number" id="sorCount" value="1" min="1" max="5">
+        <div id="sorInputs"></div>
+    </div>
+
+    <!-- Баллы за Соч -->
+    <div class="section soch-section">
+        <label>Баллы за Соч:</label>
+        <input type="number" id="sochScore" placeholder="Набранные баллы">
+        <input type="number" id="sochMax" placeholder="Максимальные баллы">
+    </div>
+
+    <!-- Кнопка расчета -->
+    <button id="calculateBtn">Рассчитать</button>
+
+    <!-- Результаты -->
+    <div class="result">
+        <p id="percentage">Сумма процентов: 0%</p>
+        <p id="grade">Оценка: -</p>
+        <p id="footer">Made by Alikhan Sultangazy | 2025</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
